@@ -1,6 +1,16 @@
 *.pyc
 __pycache__
-env
 *.sqlite3
 .DS_Store
 staticfiles
+env
+ENV
+dist
+MANIFEST
+*.pyc
+*.egg*
+build/
+src/
+.notebook/
+.vscode/
+.metals/

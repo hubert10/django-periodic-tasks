@@ -32,7 +32,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         if len(Currency.objects.all()) == 0:
-            respons = urllib.request.urlopen(settings.OPEN_EXCHANGERATES_URL)
+            respons = urllib.request.urlopen(settings.open_exchangerate_url)
             htm = respons.read().decode("utf-8")
             my_dicti = json.loads(htm)
             for k, v in my_dicti.items():
@@ -40,7 +40,7 @@ class Command(BaseCommand):
                     currency_label=str(k), currency_name=str(v)
                 )
         try:
-            respon = urllib.request.urlopen(settings.OPEN_EXCHANGERATES_LATEST_URL)
+            respon = urllib.request.urlopen(settings.open_exchangerate_latest_url)
             html = respon.read().decode("utf-8")
             my_dictio = json.loads(html)
             my_dictio = my_dictio["rates"]
