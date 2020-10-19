@@ -1,6 +1,5 @@
 import uuid
 from django.db import models
-
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -54,10 +53,6 @@ class Currency(models.Model):
 
 
 class CurrencyRate(models.Model):
-    class Permanent:
-        # If you need to restore a deleted object instead of re-creating the same one use the restore_on_create attribute:
-        restore_on_create = True
-
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, unique=True, editable=False
     )
