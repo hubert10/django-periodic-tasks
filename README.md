@@ -14,7 +14,7 @@ Spin up the containers:
 $ docker-compose up -d --build
 ```
 
-Make sure that the message broker `redis` service is running :
+Make sure the message broker `redis` service is running :
 
 ```sh
 $ docker-compose logs -f 'redis'
