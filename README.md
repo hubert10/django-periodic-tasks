@@ -20,14 +20,20 @@ Open the logs associated with the `celery` service to see the tasks running peri
 $ docker-compose logs -f 'celery'
 ```
 
-Open the logs associated with the `celery_beat` service to see the tasks running periodically:
+Open the logs associated with the `celery-beat` service to see the tasks running periodically:
 
 ```sh
-$ docker-compose logs -f 'beat'
+$ docker-compose logs -f 'celery-beat'
 ```
 
 Open the logs associated with the `redis` service to see the tasks running periodically:
 
 ```sh
 $ docker-compose logs -f 'redis'
+```
+
+Open the logs associated with the `django apps` service to see the tasks running periodically:
+
+```sh
+$ docker-compose logs -f 'web'
 ```
