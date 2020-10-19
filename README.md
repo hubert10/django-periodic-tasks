@@ -14,26 +14,26 @@ Spin up the containers:
 $ docker-compose up -d --build
 ```
 
-Open the logs associated with the `celery` service to see the tasks running periodically:
-
-```sh
-$ docker-compose logs -f 'celery'
-```
-
-Open the logs associated with the `celery-beat` service to see the tasks running periodically:
-
-```sh
-$ docker-compose logs -f 'celery-beat'
-```
-
-Open the logs associated with the `redis` service to see the tasks running periodically:
+Make sure that `redis` service is running :
 
 ```sh
 $ docker-compose logs -f 'redis'
 ```
 
-Open the logs associated with the `django apps` service to see the tasks running periodically:
+Open the `django apps` logs service to see if your application is up running:
 
 ```sh
 $ docker-compose logs -f 'web'
+```
+
+Open the logs associated with the `celery-beat` service to see the scheduler running:
+
+```sh
+$ docker-compose logs -f 'celery-beat'
+```
+
+Open the logs associated with the `celery` service to see the tasks running periodically:
+
+```sh
+$ docker-compose logs -f 'celery'
 ```
