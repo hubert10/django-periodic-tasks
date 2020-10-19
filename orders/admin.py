@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from .models import Order, Product, Currency, CurrencyRate
 
 
@@ -15,17 +14,25 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Currency)
 class CurrencyAdmin(admin.ModelAdmin):
-    list_display = ("currency_name", "currency_label", "id")
+    list_display = (
+        "id",
+        "name",
+        "label",
+    )
     search_fields = [
-        "currency_name",
+        "name",
     ]
     list_per_page = 50
 
 
 @admin.register(CurrencyRate)
 class CurrencyRateAdmin(admin.ModelAdmin):
-    list_display = ("currency_rate", "currency_label", "id")
+    list_display = (
+        "id",
+        "rate",
+        "label",
+    )
     search_fields = [
-        "currency_rate",
+        "rate",
     ]
     list_per_page = 50

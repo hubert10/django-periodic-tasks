@@ -159,4 +159,4 @@ ADMINS = [
 ]
 
 
-open_exchangerate_uri = "https://openexchangerates.org/api/latest.json?app_id=f4a64da09e994627af7e36fdc227f0de"
+open_exchangerate_uri = "https://api.exchangeratesapi.io/latest"
