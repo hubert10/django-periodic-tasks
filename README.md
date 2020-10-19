@@ -1,4 +1,4 @@
-# Handling Periodic Tasks in Django with Celery and Docker
+# Handling Periodic Tasks in Django with Celery, Redis and Docker
 
 Example of how to manage periodic tasks with Django, Celery, and Docker
 
@@ -18,4 +18,16 @@ Open the logs associated with the `celery` service to see the tasks running peri
 
 ```sh
 $ docker-compose logs -f 'celery'
+```
+
+Open the logs associated with the `celery_beat` service to see the tasks running periodically:
+
+```sh
+$ docker-compose logs -f 'beat'
+```
+
+Open the logs associated with the `redis` service to see the tasks running periodically:
+
+```sh
+$ docker-compose logs -f 'redis'
 ```
